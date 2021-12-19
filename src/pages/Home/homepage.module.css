@@ -1,0 +1,15 @@
+.mainContainer {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+    width: 816px;
+    gap: 8px;
+}
+.leftBlock {
+    width: 100%;
+}
+@media (max-width: 800px) {
+    .mainContainer {
+        width: 100%;
+    }
+}

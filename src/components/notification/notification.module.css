@@ -1,0 +1,59 @@
+.Notification {
+    flex: 4;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    height: fit-content;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+.Notification::-webkit-scrollbar {
+    width: 4px;
+    transition: all 0.4s linear;
+}
+.Notification::-webkit-scrollbar:hover {
+    width: 8px;
+}
+.Notification::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--grayColor);
+    border-radius: 10px;
+}
+.Notification::-webkit-scrollbar-thumb {
+    background: var(--grayDarkColor);
+    border-radius: 100px;
+}
+.Notification::-webkit-scrollbar-thumb:hover {
+    background: var(--primaryColor);
+}
+.headerNotification {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    padding: 6px 0;
+    background: #fff;
+    border-bottom: 2px solid var(--primaryColor);
+}
+.notificationItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+.notificationItem:hover {
+    background-color: var(--primaryColorLight);
+}
+.notificationText {
+    max-width: 200px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--primaryColor);
+}
+.notificationTime {
+    font-size: 10px;
+}

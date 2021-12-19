@@ -1,0 +1,149 @@
+.wrapper {
+    margin-top: 50px;
+}
+
+.postItem {
+    padding: 8px;
+    border: 1px solid var(--grayColor);
+    border-radius: 2px;
+    margin: 8px 0;
+    width: 500px;
+}
+.postHeader {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    position: relative;
+}
+.avatarUserPost {
+    box-shadow: 0 0 0 2px rgba(222, 67, 19, 0.8);
+}
+.dataUserPost {
+    flex: 1;
+}
+.dataUserPost .userName {
+    font-size: 16px;
+    color: inherit;
+    text-decoration: none;
+}
+.dataUserPost .userName:hover {
+    text-decoration: underline;
+}
+
+.dataUserPost .datePost {
+    font-size: 12px;
+    color: #888;
+}
+.operationPost {
+    width: 25px;
+    height: 25px;
+    background: var(--grayColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.operationPost:hover {
+    opacity: 0.8;
+}
+.dropdownMenuPost {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    list-style: none;
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--grayColor);
+    z-index: 10;
+    width: 80px;
+}
+.dropdownMenuItem {
+    padding: 4px 6px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.dropdownMenuItem a {
+    text-decoration: none;
+    color: inherit;
+}
+.postContent {
+    overflow: hidden;
+}
+.dropdownMenuItem:hover {
+    background: var(--primaryColor);
+    color: #fff;
+}
+.postMedia {
+    /* border: 1px solid var(--primaryColor); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    border-radius: 4px;
+    max-height: 500px;
+    height: fit-content;
+}
+.rec-carousel-item {
+    height: fit-content;
+}
+.postInteract {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0;
+}
+.postLove,
+.postComment {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    gap: 6px;
+}
+.postLove:hover {
+    background: var(--grayColor);
+}
+.postComment:hover {
+    background: var(--grayColor);
+}
+.formAddComment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--grayColor);
+    padding: 8px 6px;
+}
+.formAddComment ion-icon {
+    font-size: 18px;
+}
+.commentInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.commentButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--primaryColor);
+    font-size: 14px;
+}
+
+.postMediaItem img {
+    object-fit: cover;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+}

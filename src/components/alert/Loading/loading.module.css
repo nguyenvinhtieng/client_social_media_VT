@@ -1,0 +1,56 @@
+.loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    background-color: transparent;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+.loadingMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+.loadingCircle {
+    width: 50px;
+    height: 50px;
+    animation: spinner 02s linear infinite;
+}
+.loadingCircle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 4px solid rgb(235, 235, 235);
+}
+.loadingCircle::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 4px solid #de4313;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+.loadingText {
+    letter-spacing: 3px;
+    font-weight: bold;
+    animation: textHide 1s linear infinite alternate;
+    color: #de4313;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes textHide {
+    to {
+        opacity: 0.2;
+    }
+}

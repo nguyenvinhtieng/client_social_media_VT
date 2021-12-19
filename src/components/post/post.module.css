@@ -1,0 +1,375 @@
+.Postlist {
+    flex: 8;
+}
+.createPost {
+    padding: 8px;
+    border: 1px solid var(--grayColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.createPostInput {
+    flex: 1;
+    background: var(--grayColor);
+    padding: 8px 12px;
+    border-radius: 24px;
+    cursor: pointer;
+    color: var(--grayDarkColor);
+}
+.modalCreatePost {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border-radius: 4px;
+    width: 500px;
+    z-index: 10;
+}
+.modalHeader {
+    padding: 4px 0 16px 0;
+    border-bottom: 2px solid var(--grayColor);
+    text-align: center;
+}
+.modalContent {
+    padding: 8px 0;
+}
+.modalContent textarea {
+    width: 100%;
+    resize: none;
+    height: 100px;
+    outline: none;
+    border: 1px solid var(--grayColor);
+    border-radius: 4px;
+    padding: 8px;
+}
+.modalContent textarea:focus {
+    border: 1px solid var(--primaryColor);
+}
+.modalContent .attach {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 12px;
+    border-radius: 4px;
+    gap: 16px;
+}
+.modalContent .attach .attachImages input {
+    display: none;
+}
+.modalContent .attach .attachImages label {
+    font-size: 24px;
+    cursor: pointer;
+    color: #28c76f;
+}
+.modalContent .attach .attachYoutube {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ea5456;
+}
+.attachMedia {
+    position: relative;
+}
+.attachMedia .popup {
+    position: absolute;
+    bottom: 100%;
+    padding: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+    background: var(--primaryColor);
+    color: #fff;
+}
+.attachMedia .popup:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(50%);
+    width: 10px;
+    height: 10px;
+    background: inherit;
+    clip-path: polygon(0% 0%, 50% 60%, 100% 0%);
+}
+.attachMedia:hover > .popup {
+    opacity: 1;
+}
+.modalFooter button {
+    width: 100%;
+    padding: 6px 24px;
+    border: none;
+    background: var(--primaryColor);
+    color: #fff;
+    border-radius: 4px;
+}
+.attachYoutubeLink {
+    width: 100%;
+    border: 1px solid var(--grayColor);
+    outline: none;
+    padding: 4px 12px;
+}
+.attachYoutubeLink:focus {
+    border-color: var(--primaryColor);
+}
+.closeModal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 24px;
+    background: var(--grayColor);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--grayDarkColor);
+    cursor: pointer;
+}
+.closeModal:hover {
+    opacity: 0.7;
+}
+
+.postItem {
+    padding: 8px;
+    border: 1px solid var(--grayColor);
+    border-radius: 2px;
+    margin: 8px 0;
+}
+.postHeader {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    position: relative;
+}
+.avatarUserPost {
+    box-shadow: 0 0 0 2px rgba(222, 67, 19, 0.8);
+}
+.dataUserPost {
+    flex: 1;
+}
+.dataUserPost .userName {
+    font-size: 16px;
+    color: inherit;
+    text-decoration: none;
+}
+.dataUserPost .userName:hover {
+    text-decoration: underline;
+}
+
+.dataUserPost .datePost {
+    font-size: 12px;
+    color: #888;
+}
+.operationPost {
+    width: 25px;
+    height: 25px;
+    background: var(--grayColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.operationPost:hover {
+    opacity: 0.8;
+}
+.dropdownMenuPost {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    list-style: none;
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--grayColor);
+    z-index: 10;
+    width: 80px;
+}
+.dropdownMenuItem {
+    padding: 4px 6px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.dropdownMenuItem a {
+    text-decoration: none;
+    color: inherit;
+}
+.postContent {
+    overflow: hidden;
+}
+.dropdownMenuItem:hover {
+    background: var(--primaryColor);
+    color: #fff;
+}
+.postMedia {
+    /* border: 1px solid var(--primaryColor); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    border-radius: 4px;
+    max-height: 500px;
+    height: fit-content;
+}
+.rec-carousel-item {
+    height: fit-content;
+}
+.postInteract {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0;
+}
+.postLove,
+.postComment {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    gap: 6px;
+}
+.postLove:hover {
+    background: var(--grayColor);
+}
+.postComment:hover {
+    background: var(--grayColor);
+}
+.formAddComment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--grayColor);
+    padding: 8px 6px;
+}
+.formAddComment ion-icon {
+    font-size: 18px;
+}
+.commentInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.commentButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--primaryColor);
+    font-size: 14px;
+}
+
+.postMediaItem img {
+    object-fit: cover;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+}
+.postMediaItem {
+    position: relative;
+}
+.deleteImg {
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.deleteImg:hover {
+    color: #ea5456;
+}
+/* // modal  */
+.modalDeletePost {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid var(--primaryColor);
+}
+
+.modalHeader {
+    padding: 8px 8px 16px 8px;
+    position: relative;
+    font-size: 16px;
+    color: var(--grayDarkColor);
+    border-bottom: 2px solid var(--grayColor);
+}
+.modalHeader ion-icon {
+    font-size: 24px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: var(--grayColor);
+    color: #999;
+    border-radius: 100rem;
+}
+.modalHeader ion-icon:hover {
+    color: #666;
+}
+.modalContent {
+    padding: 8px 8px 16px 8px;
+    color: var(--grayDarkColor);
+}
+.formGroup label {
+    width: 100%;
+    color: var(--grayDarkColor);
+}
+.formGroup input {
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--grayColor);
+    padding: 4px 6px;
+}
+.modalFooter {
+    padding: 8px 8px 16px 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.modalFooter button {
+    padding: 4px 12px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 4px;
+}
+.modalFooterDelete button:nth-child(1) {
+    background-color: var(--grayColor);
+    margin-right: 12px;
+    color: var(--grayDarkColor);
+}
+.modalFooterDelete button:nth-child(2) {
+    background-color: #ea5456;
+}
+
+@media (max-width: 600px) {
+    .modalCreatePost {
+        width: 95%;
+    }
+}

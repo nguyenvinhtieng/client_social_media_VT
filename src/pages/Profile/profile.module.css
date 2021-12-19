@@ -1,0 +1,145 @@
+.profile {
+    margin-top: 50px;
+    width: 50%;
+    margin-bottom: 50px;
+}
+.profileheader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 0 20px 0;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--primaryColor);
+}
+.profileUserData {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.profileUserData .userName {
+    font-size: 20px;
+}
+.profileUserData .slogan {
+    font-size: 14px;
+}
+.profileUserData .email {
+    font-size: 14px;
+}
+.buttonEditUser {
+    padding: 2px 20px;
+    background: #fff;
+    color: var(--primaryColor);
+    border: none;
+    outline: none;
+    transition: all 0.2s linear;
+    border: 1px solid var(--primaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 4px;
+    width: fit-content;
+}
+.buttonEditUser:hover {
+    color: #fff;
+    background: var(--primaryColor);
+}
+
+.modalEditProfile {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 15;
+    border: 1px solid var(--primaryColor);
+}
+.modalHeader {
+    font-size: 24px;
+    padding: 8px 8px 12px 8px;
+    border-bottom: 2px solid var(--primaryColor);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.modalHeader ion-icon {
+    font-size: 30px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: var(--grayColor);
+    border-radius: 100rem;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.modalHeader ion-icon:hover {
+    color: #555;
+}
+.modalContent {
+    padding: 8px;
+}
+.formGroup {
+    margin: 4px 0;
+}
+.formGroup label {
+    width: 100%;
+}
+.formGroup input {
+    width: 100%;
+    border: 1px solid var(--grayColor);
+    padding: 4px;
+    outline: none;
+    border-radius: 4px;
+}
+.formGroup input:focus {
+    border: 1px solid var(--primaryColorLight);
+}
+.formGroup input[type="file"] {
+    border: 1px solid red;
+}
+.formFile input {
+    display: none;
+}
+.chooseFile {
+    border: 1px solid var(--primaryColor);
+    transition: all 0.2s linear;
+    padding: 2px 4px;
+    cursor: pointer;
+    font-size: 14px;
+    gap: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chooseFile:hover {
+    border: 1px solid var(--primaryColor);
+    transition: all 0.2s linear;
+    padding: 2px 4px;
+    cursor: pointer;
+    background-color: var(--primaryColor);
+    color: #fff;
+    border-radius: 6px;
+}
+.modalFooter {
+    margin: 8px 8px 16px 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btnSave {
+    padding: 4px 26px;
+    border: none;
+    outline: none;
+    background-color: var(--primaryColor);
+    color: #fff;
+    border-radius: 4px;
+}
+@media (max-width: 600px) {
+    .profile {
+        width: 95%;
+    }
+    .modalEditProfile {
+        width: 95%;
+    }
+}

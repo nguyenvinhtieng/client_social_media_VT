@@ -1,0 +1,143 @@
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid var(--grayColor);
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 100px;
+    align-items: center;
+    background-color: #fff;
+    z-index: 10;
+}
+.headerLogo {
+    font-family: "Alex Brush", cursive;
+    font-size: 32px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.headerSearch {
+    display: flex;
+    border: 1px solid var(--grayColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    height: 30px;
+}
+.headerSearch input {
+    padding: 2px 4px;
+    border: none;
+    min-width: 300px;
+    outline: none;
+    color: var(--grayDarkColor);
+}
+
+.headerSearch button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.headerSearch button ion-icon {
+    cursor: pointer;
+}
+.headerMenu {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    position: relative;
+}
+.headerMenuItem {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+.headerMenuItem:hover {
+    background-color: var(--grayColor);
+}
+.headerMenuItem a {
+    color: inherit;
+    text-decoration: none;
+}
+.dropDownMenu {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    width: 150px;
+    list-style: none;
+    border: 1px solid var(--grayColor);
+    background-color: white;
+    border-radius: 4px;
+}
+
+.dropDownMenu li {
+    word-wrap: nowrap;
+    padding: 8px 12px;
+}
+.dropDownMenu hr {
+    background-color: var(--primaryColor);
+    height: 2px;
+}
+.dropDownMenu li:hover {
+    background-color: var(--grayColor);
+}
+.dropDownMenu li:hover > * {
+    color: var(--primaryColor);
+}
+.dropDownMenu li a ion-icon {
+    transition: transform 0.25s linear;
+}
+.dropDownMenu li:hover a ion-icon {
+    transform: translateX(5px);
+}
+.dropDownMenu li a {
+    word-wrap: nowrap;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: var(--grayDarkColor);
+    text-decoration: none;
+}
+.btnLogout {
+    cursor: pointer;
+    color: #ea5456;
+}
+.btnLogout div:hover {
+    cursor: pointer;
+    color: #ea5456;
+}
+.btnLogout:hover {
+    cursor: pointer;
+    color: #ea5456;
+}
+@media (max-width: 850px) {
+    .Header {
+        padding: 0 15px;
+        height: 50px;
+    }
+}
+@media (max-width: 642px) {
+    .headerLogo {
+        font-size: 24px;
+    }
+    .headerSearch {
+        display: none;
+    }
+    .headerMenuItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

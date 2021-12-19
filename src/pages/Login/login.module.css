@@ -1,0 +1,60 @@
+.Login {
+    width: 400px;
+    padding: 16px;
+    border: 1px solid var(--grayColor);
+    margin-top: 25px;
+    text-align: center;
+}
+.loginHeader {
+    font-family: "Alex Brush", cursive;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    margin: 12px 0;
+}
+.form {
+    width: 100%;
+}
+.formGroup {
+    margin: 12px 0;
+}
+.formGroup input {
+    width: 100%;
+    padding: 6px 6px;
+    border: 1px solid var(--grayColor);
+    outline: none;
+    color: #777777;
+    font-size: 14px;
+    text-shadow: auto;
+}
+.formGroup input:focus {
+    box-shadow: 0 0 5px 4px var(--primaryColorLight);
+}
+.formGroup button {
+    width: 100%;
+    padding: 4px 6px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: var(--primaryColor);
+    color: #fff;
+}
+
+.redirect {
+    font-size: 14px;
+}
+.redirect a {
+    font-size: 14px;
+    color: inherit;
+    transition: all 0.2s linear;
+    text-decoration: none;
+}
+.redirect a:hover {
+    text-decoration: underline;
+    color: var(--primaryColor);
+}
+.messageError {
+    color: red;
+    background-color: rgba(234, 84, 86, 0.1);
+    padding: 6px;
+}
