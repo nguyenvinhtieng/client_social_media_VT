@@ -3,5 +3,5 @@ export const GLOBAL_TYPES = {
     POST: "POST",
     LOADING: "LOADING",
     PROFILE_USER: "PROFILE_USER",
-    TOAST: "TOAST"
+    SOCKET: "SOCKET"
 }

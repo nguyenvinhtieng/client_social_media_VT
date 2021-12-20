@@ -4,13 +4,14 @@ import showToast from "../../utils/showToast";
 
 export const userPost = (post) => {
     return async (dispatch, getState) => {
-        const { posts } = getState()
+        const { posts, socket } = getState()
         dispatch({ type: GLOBAL_TYPES.LOADING, payload: true })
         let res = await postMethod('posts', post)
         let data = res.data
         if (data.success) {
             dispatch({ type: GLOBAL_TYPES.LOADING, payload: false })
             dispatch({ type: GLOBAL_TYPES.POST, payload: [data.post, ...posts] })
+            socket.socket.emit("user-post", data.post)
             showToast("success", data.message)
         } else {
             showToast("error", data.message)

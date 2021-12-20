@@ -9,24 +9,24 @@ import PostDetail from './pages/PostDetail/PostDetail'
 import { getMethod } from './utils/fetchData';
 import Loading from './components/alert/Loading/Loading'
 import { TOKEN_NAME } from './credentials'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { HOST } from './credentials'
+import io from "socket.io-client";
 import { GLOBAL_TYPES } from './redux/actions/constants';
+import showToast from './utils/showToast';
+const socketClient = io.connect(HOST);
 function App() {
-  const { auth, loading, toasting } = useSelector(state => state)
+  const { auth, loading, socket } = useSelector(state => state)
   const dispatch = useDispatch()
-  if (toasting?.hasToast) {
-    toast[toasting.type](toasting.message, {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
-    dispatch({ type: GLOBAL_TYPES.TOAST, payload: { hasToast: false } })
-  }
+  console.log(socket)
+  useEffect(() => {
+    socketClient.on("has-user-post", data => {
+      showToast("info", `Has user ${data.name_user} just posted new post!`)
+    })
+    dispatch({ type: GLOBAL_TYPES.SOCKET, payload: { socket: socketClient } })
+  }, [dispatch])
+
   useEffect(() => {
     async function checkLoginUser() {
       return await getMethod("")
@@ -60,7 +60,6 @@ function App() {
         draggable
         pauseOnHover
       />
-      {/* Same as */}
       <ToastContainer />
       <Router>
         <Routes>
