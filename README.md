@@ -1,11 +1,29 @@
-# Getting Started with Create React App
+# Social Media App (React App)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Teachnology
 
-## Available Scripts
+React, SCSS, Redux
 
-In the project directory, you can run:
+## Features
 
+* Login, Register
+* Create Post(Attach images, youtube video)
+* Delete Post
+* Update post
+* Copy link post
+* Add, Delete, Edit Comment
+* Edit Profile
+* View user profile
+
+## Link demo
+* https://vinhtieng-social-media.netlify.app/
+
+## Test account
+* username: tieng
+* password: 123456
+
+
+## React README
 ### `npm start`
 
 Runs the app in the development mode.\
